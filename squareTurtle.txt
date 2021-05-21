@@ -1,0 +1,14 @@
+import turtle             # Allows us to use turtles
+wn = turtle.Screen()      # Creates a playground for turtles
+k = turtle.Turtle()    # Create a turtle, assign to k
+
+def corner():
+    k.forward(90)          # Tell k to move forward by 90 units
+    k.left(90)             # Tell k to turn by 90 degrees
+
+for x in range(0,4):
+    corner()
+
+
+
+wn.mainloop()             # Wait for user to close window
