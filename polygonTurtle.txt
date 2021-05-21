@@ -1,0 +1,22 @@
+import turtle             # Allows us to use turtles
+
+wn = turtle.Screen()      # Creates a playground for turtles
+k = turtle.Turtle()       # Create a turtle, assign to k
+
+
+x = int(input("Enter the desired length of sides:"))
+y = int(input("Enter the desired amount of angles:"))
+
+def corner(side, turn):
+    k.forward(side)         # Tell turtle to move forward by chosen units
+    k.left(turn)            # Tell turtle to turn by certain degrees based on designated number of sides
+
+if y >= 3:                  # Loop corner function as many times as angle input
+    angle =  180 - ((y - 2)*180/y)
+    for i in range(0, y):
+        corner(x, angle)
+
+else:
+    print("A polygon must have at least 3 sides.") # Incorrect input by user
+
+wn.mainloop()             # Wait for user to close window
