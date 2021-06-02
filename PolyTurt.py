@@ -23,19 +23,27 @@ def prompt_user_for_integer(prompt):       # Function for accepting integer inpu
 
 def prompt_user_for_string(prompt):        # Function for accepting string input.
     text = input(prompt)
-    return str(text) 
+    return str(text)
+
+def prompt_user_for_boolean(prompt):        # Function for accepting boolean input.
+    text = input(prompt)
+    return bool(text) 
 
 wn = Screen()      # Creates a window to display turtle actions.
 
-while True:             #Loop prompt for side length, corners, and color so many polygons can be drawn.
-    sideLength = prompt_user_for_integer("Enter the desired length of sides:")
-    corner = prompt_user_for_integer("Enter the desired number of corners:")
-    polyColor = prompt_user_for_string("What color would like the polygon to be?")
- 
-    myTurt = PolyTurtle(sideLength, corner, polyColor)       # Create a turtle object, assign to myTurt.
-    if myTurt.turn >= 3:                                     # Loop corner function as many times as angle input.
-        for i in range(myTurt.turn):
-            myTurt.move_and_turn()
+def get_next_move():
+    powerSwitch = True
+    while powerSwitch =! False:             #Loop prompt for side length, corners, and color so many polygons can be drawn.
+        sideLength = prompt_user_for_integer("Enter the desired length of sides:")
+        corner = prompt_user_for_integer("Enter the desired number of corners:")
+        polyColor = prompt_user_for_string("What color would like the polygon to be?")
+     
+        myTurt = PolyTurtle(sideLength, corner, polyColor)       # Create a turtle object, assign to myTurt.
+        if myTurt.turn >= 3:                                     # Loop corner function as many times as angle input.
+            for i in range(myTurt.turn):
+                myTurt.move_and_turn()
+
+        powerSwitch = prompt_user_for_boolean("Type 0 to quit. Press 
 
 
 
